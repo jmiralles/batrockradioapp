@@ -7,15 +7,18 @@
     "test": "jest"
   },
   "dependencies": {
+    "node-podcast-parser": "^1.0.2",
+    "podcast-parser": "^1.1.2",
     "react": "15.3.2",
-    "react-native": "0.37.0"
+    "react-native": "0.37.0",
+    "react-native-html-parser": "0.0.4"
   },
   "jest": {
     "preset": "jest-react-native"
   },
   "devDependencies": {
     "babel-jest": "17.0.2",
-    "babel-preset-react-native": "1.9.0",
+    "babel-preset-react-native": "^1.9.0",
     "jest": "17.0.2",
     "jest-react-native": "17.0.2",
     "react-test-renderer": "15.3.2"

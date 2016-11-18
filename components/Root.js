@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PodcastList from '../components/podcastList';
+
 import {
   StyleSheet,
   Text,
@@ -14,6 +16,7 @@ class batrockradio extends Component {
         <Text style={clrs.instructions}>
           Welcome to Batrock Radio!
         </Text>
+        <PodcastList />
         <StatusBar backgroundColor={clrs.black} barStyle='light-content'/>
       </View>
     );
