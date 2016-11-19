@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { ListView, Text } from 'react-native';
-import { getLastPodcast } from '../components/fetcher';
+import { getPodcasts, _fetch } from '../components/fetcher';
 
 export default class podcastList extends Component {
 
@@ -16,7 +16,15 @@ export default class podcastList extends Component {
     }
 
     componentDidMount() {
-       getLastPodcast();
+       const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2})
+
+       getPodcasts()
+       .then((titles) => {
+           this.setState({
+               dataSource: ds.cloneWithRows(titles)
+           });
+       });
+
     }
 
     render() {
